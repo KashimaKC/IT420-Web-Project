@@ -1,0 +1,24 @@
+/* nav styles */
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6vh;
+    font-size: large;
+    background-color: grey;
+}
+
+.navbar-container > p {
+    padding-left: 10px;
+}
+
+.navbar-container > button {
+    margin-right: 10px;
+    width: 100px;
+    height: 50%;
+}
+
+.navbar-container > button#home-btn {
+    margin-left: auto;
+}
