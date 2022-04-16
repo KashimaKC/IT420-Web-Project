@@ -1,6 +1,6 @@
 
+const Donate = () => {
 
-const Body = () => {
 
     return (
         <div>
@@ -9,4 +9,4 @@ const Body = () => {
     )
 }
 
-export default Body
+export default Donate

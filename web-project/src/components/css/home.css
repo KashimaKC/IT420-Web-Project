@@ -1,0 +1,31 @@
+
+.homepage-container > .header-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 75%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+.homepage-container > .header-container > img {
+    flex-shrink: 2;
+    padding-right: 20px;
+}
+
+.homepage-container > .header-container > h2 {
+   flex-shrink: 1;
+   display: block;
+   color: rgb(230, 230, 255);
+}
+
+@media only screen and (max-width: 1300px) {
+ 
+    .homepage-container > .header-container {
+        flex-direction: column;
+    }
+    
+}
