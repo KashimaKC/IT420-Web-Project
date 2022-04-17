@@ -28,7 +28,7 @@ const Nav = () => {
 
         switch (pageKey) {
             case 'home' : 
-                setContent(<Home />)
+                setContent(<Home /> )
                 break;
             case 'volunteer' :
                 setContent(<Volunteer />)
@@ -67,8 +67,21 @@ const Nav = () => {
             <div className="body-content">
 
                 {bodyContent}
-
+                
             </div>
+            <footer className="footer-container"> 
+                <p>
+                    © 2019 Starting Point for Refugee Children <br />
+                    Starting Point for Refugee Children | Sacramento, CA
+                </p>
+                <button id="contact-footer-button" onClick={() => changeBodyContent('help')}>Contact Us</button>
+                <a href="https://www.facebook.com/startingpointforrefugeechildren">
+                    <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="FB"></img>
+                </a>
+                <a href="https://www.instagram.com/startingpointsac/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png" alt="IG"></img>
+                </a>
+            </footer> 
         </div>
     )
 }
