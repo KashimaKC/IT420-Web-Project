@@ -1,0 +1,42 @@
+
+.donate-container {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donate-container > .monetary-donation > p {
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: 50px;
+}
+
+.donate-container > .item-donation {
+
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: 50px;
+
+}
+
+/* donation form styles section */
+
+.donation-form {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.donation-form > input {
+    margin-top: 10px;
+    height: 30px;
+    border: 2px solid black;
+
+}
