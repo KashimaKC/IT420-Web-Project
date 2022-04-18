@@ -40,6 +40,7 @@ const Donate = () => {
                     <input type={'text'} id='items' placeholder="Items you would like to donate (please include gender and size)" required></input>
                     <input type={'submit'} value='Submit'></input>
                 </form>
+                <h2>Thank you for supporting Starting Point and the newcomer community!</h2>
             </div>
         </div>
     )
