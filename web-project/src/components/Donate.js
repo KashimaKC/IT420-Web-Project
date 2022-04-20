@@ -15,7 +15,7 @@ const Donate = () => {
                     Donations to Starting Point are tax deductible. Our nonprofit EIN number is 82-2055439. <br />
                     <b>Click here to be linked to Paypal:</b>
                 </p>
-                <button id="donate-link-bttn">Donate</button>
+                <button id="donate-link-bttn" onClick={event => window.location.href='https://startingpointworld.kindful.com/'}>Donate</button>
             </div>
             <hr />
 
