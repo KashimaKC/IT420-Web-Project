@@ -4,6 +4,7 @@ import './components/css/home.css'
 import './components/css/sponsors.css'
 import './components/css/donate.css'
 import './components/css/request-help.css'
+import './components/css/volunteer.css'
 
 function App() {
 

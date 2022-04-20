@@ -19,7 +19,7 @@
 .homepage-container > .header-container > h2 {
    flex-shrink: 1;
    display: block;
-   color: rgb(230, 230, 255);
+   color: rgb(38, 38, 48);
 }
 
 @media only screen and (max-width: 1300px) {
