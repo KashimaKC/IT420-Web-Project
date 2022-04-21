@@ -7,6 +7,7 @@
     height: 6vh;
     font-size: large;
     background-color: grey;
+    color: black;
 }
 
 .navbar-container > p {
@@ -21,4 +22,12 @@
 
 .navbar-container > button#home-btn {
     margin-left: auto;
+}
+
+/* root */
+
+#root {
+    color: #737070;
+    background: linear-gradient(360deg, #ffffff 10%, #eceaf5 360% );
+    /*background: linear-gradient(360deg, #f1f5f5 10%, #eee9e9 360% );*/
 }

@@ -1,0 +1,37 @@
+.header-slide {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image { 
+    padding-right: 25px;
+    width: 650px;
+    height: auto;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 100px;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 100px;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}

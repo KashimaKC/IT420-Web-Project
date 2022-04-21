@@ -9,6 +9,7 @@ body {
   background-color: rgb(234, 241, 241);
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +22,7 @@ code {
   align-items: center;
   display: flex;
   background-color: darkcyan;
+  color: black;
   height: 100px;
 }
 

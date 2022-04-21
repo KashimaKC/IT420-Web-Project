@@ -69,6 +69,8 @@ const Nav = () => {
                 {bodyContent}
                 
             </div>
+
+            {/* Consider making this a separate component */}
             <footer className="footer-container"> 
                 <p>
                     © 2019 Starting Point for Refugee Children <br />

@@ -5,6 +5,7 @@ import './components/css/sponsors.css'
 import './components/css/donate.css'
 import './components/css/request-help.css'
 import './components/css/volunteer.css'
+import './components/css/autoslide.css'
 
 function App() {
 
