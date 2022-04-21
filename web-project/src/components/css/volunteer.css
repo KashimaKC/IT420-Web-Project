@@ -1,27 +1,50 @@
 .volunteer-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    
+    background: linear-gradient(360deg, #ffffff 10%, #eceaf5 360% );
 }
 
-.volunteer-container > div > p, h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.volunteer-form-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.volunteer-flex-container { 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
+.flex-content { 
+    width: 500px;
+    line-height: 30px;
+}
+
+/*
+        Styles for the volunteer form.
+*/
+
+
+.volunteer-form-container {
+    display: flex ;
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    align-items: center;
+
+    border: 2px solid black;
+}
+
 .volunteer-form-container > input {
-    margin-top: 10px;
+    width: 90%;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

@@ -19,7 +19,9 @@
 .homepage-container > .header-container > h2 {
    flex-shrink: 1;
    display: block;
-   color: rgb(38, 38, 48);
+   max-width: 450px;
+   /* this is the font color for the header, consider changing. */
+   color: #737070;
 }
 
 @media only screen and (max-width: 1300px) {
