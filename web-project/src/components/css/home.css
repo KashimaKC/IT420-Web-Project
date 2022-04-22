@@ -4,30 +4,28 @@
     text-align: center;
     align-items: center;
     flex-wrap: nowrap;
-    width: 75%;
-    margin-top: 5%;
+    flex-direction: column;
+    width: 95%;
+    justify-content: space-evenly;
+    margin-top: 75px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 25px;
+    margin-bottom: 75px;
 }
 
-.homepage-container > .header-container > img {
-    flex-shrink: 2;
-    padding-right: 20px;
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    height: 490px;
 }
 
 .homepage-container > .header-container > h2 {
    flex-shrink: 1;
    display: block;
-   max-width: 450px;
+   margin-top: 60px;
+   max-width: 550px;
    /* this is the font color for the header, consider changing. */
    color: #737070;
-}
-
-@media only screen and (max-width: 1300px) {
- 
-    .homepage-container > .header-container {
-        flex-direction: column;
-    }
-    
 }

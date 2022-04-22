@@ -2,6 +2,7 @@
 
 .navbar-container {
     display: flex;
+    top: 0;
     flex-direction: row;
     align-items: center;
     height: 6vh;

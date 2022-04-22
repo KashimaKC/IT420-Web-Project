@@ -1,37 +1,37 @@
 .header-slide {
     height: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .slide-image { 
-    padding-right: 25px;
-    width: 650px;
-    height: auto;
+    width: 100%;
+    max-width: 90%;
+    max-height: 490px;
+    box-shadow: 0px 0px 15px black;
 }
 
 .right-arrow {
-    position: absolute;
-    right: 100px;
+    margin-left: 35px;
     font-size: 3rem;
     z-index: 10;
 }
 
 .left-arrow {
-    position: absolute;
-    left: 100px;
+    margin-right: 35px;
     font-size: 3rem;
     z-index: 10;
 }
 
 .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
+    opacity: 0.6;
+    transition-duration: 2s ease;
 }
 
 .slide.active {
     opacity: 1;
     transition-duration: 1s;
-    transform: scale(1.08);
+    transform: scale(1.01);
 }

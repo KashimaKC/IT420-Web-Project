@@ -3,6 +3,7 @@
 
 import Sponsors from "./Sponsors";
 import AutoSlide from "./AutoSlide";
+import slideData from "./slideData";
 
 
 const Home = () => {
@@ -17,12 +18,17 @@ const Home = () => {
     return (
         <div className="homepage-container">
             <div className="header-container">
-                <AutoSlide />
+                <div className="slideshow-container">
+
+                    <AutoSlide slideData={slideData} />
+
+                </div>
                 <h2>
                     Starting Point is dedicated to supporting newly-arrived refugee children in the greater Sacramento area.
                     We strive to give them a warm welcome by providing basic necessities and programs as they begin their new lives in the U.S.
                 </h2>
             </div>
+
             <hr style={borderStyle}/>
             <Sponsors />
         </div>
