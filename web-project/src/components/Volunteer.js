@@ -72,14 +72,15 @@ const Volunteer = () => {
                         </p>
                     </div>
                 </div>
-                <div className='volunteer-content'>
-                    <div className="flex-content">
-                        <h3>Other Skills</h3>
-                        <p>
-                            If you have skills that you would like to offer, please contact us! 
-                            We are presently in need of volunteers to pick up and deliver items, apply for grants, and be a venue host.
-                        </p>
-                    </div>
+                
+            </div>
+            <div className="form-header">
+                <div className="flex-content">
+                    <h3>Other Skills</h3>
+                    <p>
+                        If you have skills that you would like to offer, please contact us! 
+                        We are presently in need of volunteers to pick up and deliver items, apply for grants, and be a venue host.
+                    </p>
                 </div>
             </div>
             
