@@ -4,7 +4,7 @@ const app = express()
 // res is used to send information to the frontend
 // req is used to receive information from the frontend
 app.get("/", (req,res) => {
-    res.send("hello world"); // test msg
+    res.send("hello trav"); // test msg
 })
 
 app.listen(3001, () =>  {
