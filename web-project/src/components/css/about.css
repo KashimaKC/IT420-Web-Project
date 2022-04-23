@@ -1,0 +1,37 @@
+
+.about-container {
+    width: 100vw;
+}
+
+.about-container > h1 {
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    height: 600px;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-image {
+    width: 200px;
+    min-width: 181px;
+}
+
+.slide-text {
+    width: 400px;
+    max-width: 400px;
+    line-height: 25px;
+}
+
+.slide-image {
+    min-width: 181px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
