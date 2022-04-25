@@ -1,7 +1,7 @@
 import Sponsors from "./Sponsors"
 
 // this component renders the request help page
-
+//for the moreKids function: https://www.geeksforgeeks.org/how-to-create-a-form-dynamically-with-the-javascript/
 
 const Help = () => {
 
@@ -25,14 +25,25 @@ const Help = () => {
             */}
 
             <form className="request-help-form">
-                <input type={'text'} placeholder='First and last name'></input>
+                <input type={'text'} placeholder='Parent first and last name'></input>
                 <input type={'text'} placeholder='Address'></input>
-                <input type={'tel'} placeholder='Phone Number'></input>
+                <input type={'tel'} placeholder="Phone Number"></input>
                 <input type={'text'} placeholder='Country of origin'></input>
+                <label for="date">Input Date arrived in US:</label>
                 <input type={'date'} placeholder='Date arrived in US'></input>
-                <input type={'text'} placeholder='Immigration status'></input>
-                <input type={'text'} placeholder='Do you speak english'></input>
-                <input type={'text'} placeholder='What is the gender and age of each child?'></input>
+                <label for="Status">Select an Immigration Status:</label>
+                    <select id="status" name="status">
+                        <option value="SIV">SIV</option>
+                        <option value="Evacuee">Evacuee</option>
+                        <option value="Parolee">Parolee</option>
+                        <option value="Asylee">Asylee</option>
+                        <option value="Diversity Visa Holder">Diversity Visa Holder</option>
+                    </select>
+                <label for="language">Do you speak English?</label>
+                    <select id="language" name="language">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
 
                 <input type={'submit'} value='Submit'></input>
             </form>
