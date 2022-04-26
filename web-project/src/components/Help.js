@@ -1,10 +1,62 @@
 import Sponsors from "./Sponsors"
+import ChildForm from "./ChildForm";
+import { useState } from "react";
+
 
 // this component renders the request help page
-//for the moreKids function: https://www.geeksforgeeks.org/how-to-create-a-form-dynamically-with-the-javascript/
 
 const Help = () => {
 
+    const [childField, setChildrenState] = useState(null);
+
+    // this definitely isnt optimized but it will work... I think
+
+    const addChild = (e) => {
+
+        // I am so sorry gods of javascript, please forgive me.
+
+        switch (e.target.value) {
+            case '1' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'} />
+                    </>
+                )
+                break;
+            case '2' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                    </>
+                )
+                break;
+            case '3' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                    </>
+                )
+                break;
+            case '4' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                    </>
+                )
+                break;
+            case 'other' :
+            default: 
+                setChildrenState(null)
+        }
+        
+
+    }
 
     return (
         <div className="help-request-container">
@@ -12,17 +64,6 @@ const Help = () => {
                 If you are a newcomer and your children need basic necessities, please complete the form below.
                 We will contact you soon with more information about becoming a Starting Point family.
             </h3>
-
-            {/* this is the request help form, feel free to edit this and make changes according to the requirements 
-                NOTES:
-
-                    - consider changing the placeholder text with the translated language that is chosen.
-
-                TODO: 
-
-                    - change the immigration status to a drop down for easy selection.
-                    - change the language inquiry to a yes / no drop down.
-            */}
 
             <form className="request-help-form">
                 <input type={'text'} placeholder='Parent first and last name'></input>
@@ -43,7 +84,19 @@ const Help = () => {
                     <select id="language" name="language">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
+                   </select>
+
+                <label for="children">How many children do you have?</label>
+                    <select id="children" name="children" onChange={addChild}>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={"other"}>Other</option>
                     </select>
+                <div className="child-add-form">
+                    {childField}
+                </div>
 
                 <input type={'submit'} value='Submit'></input>
             </form>

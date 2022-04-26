@@ -34,3 +34,26 @@
     height: 20px;
     width: 80%;
 }
+
+/* This is the styling section for the add children forms */
+
+.child-add-form {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.child-add-form > .input-field {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.child-add-form > .input-field > input {
+    height: 35px;
+    margin-top: 10px;
+}
