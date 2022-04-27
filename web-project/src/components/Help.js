@@ -87,12 +87,17 @@ const Help = () => {
             </h3>
 
             <form className="request-help-form">
-                <input type={'text'} placeholder='Parent first and last name' maxlength='250'></input>
-                <input type={'text'} placeholder='Address' maxlength='250'></input>
+                <input type={'text'} placeholder='Parent Last Name' maxlength='250'></input>
+                <input type={'text'} placeholder='Parent First Name' maxlength='250'></input>
+                <input type={'text'} placeholder='Street Number - example: 2311' maxlength='10'></input>
+                <input type={'text'} placeholder='Street Name - example: Hamlet Way' maxlength='250'></input>
+                <input type={'text'} placeholder='Apt/Suite/Unit/Building/Floor - example: Apt. 4' maxlength='20'></input>
+                <input type={'text'} placeholder='City - example: Manhattan' maxlength='25'></input>
+                <input type={'text'} placeholder='Postal Code - example: 80456' maxlength='15'></input>
                 <input type={'tel'} placeholder="Phone Number"></input>
-                <input type={'text'} placeholder='Country of origin' maxlength='250'></input>
                 <label for="date">Input Date arrived in US:</label>
                 <input type={'date'} placeholder='Date arrived in US'></input>
+                <input type={'text'} placeholder='Country of Origin - example: Afghanistan' maxlength='250'></input>
                 <label for="Status">Select an Immigration Status:</label>
                     <select id="status" name="status">
                         <option value="SIV">SIV</option>
@@ -106,7 +111,7 @@ const Help = () => {
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                    </select>
-
+                <input type={"text"} placeholder='Notes About Parent' maxlength='250'></input>
                 <label for="children">How many children do you have?</label>
                     <select id="children" name="children" onChange={addChild}>
                         <option value={1}>1</option>
