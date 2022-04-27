@@ -50,12 +50,33 @@ const Help = () => {
                     </>
                 )
                 break;
+            case '5' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                        <ChildForm childTitle={'Child 5'}/>
+                    </>
+                )
+                break;
+            case '6' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                        <ChildForm childTitle={'Child 5'}/>
+                        <ChildForm childTitle={'Child 6'}/>
+                    </>
+                )
+                break;
             case 'other' :
             default: 
                 setChildrenState(null)
         }
-        
-
     }
 
     return (
@@ -66,10 +87,10 @@ const Help = () => {
             </h3>
 
             <form className="request-help-form">
-                <input type={'text'} placeholder='Parent first and last name'></input>
-                <input type={'text'} placeholder='Address'></input>
+                <input type={'text'} placeholder='Parent first and last name' maxlength='250'></input>
+                <input type={'text'} placeholder='Address' maxlength='250'></input>
                 <input type={'tel'} placeholder="Phone Number"></input>
-                <input type={'text'} placeholder='Country of origin'></input>
+                <input type={'text'} placeholder='Country of origin' maxlength='250'></input>
                 <label for="date">Input Date arrived in US:</label>
                 <input type={'date'} placeholder='Date arrived in US'></input>
                 <label for="Status">Select an Immigration Status:</label>
@@ -92,6 +113,8 @@ const Help = () => {
                         <option value={2}>2</option>
                         <option value={3}>3</option>
                         <option value={4}>4</option>
+                        <option value={5}>5</option>
+                        <option value={6}>6</option>
                         <option value={"other"}>Other</option>
                     </select>
                 <div className="child-add-form">
