@@ -1,11 +1,6 @@
-
-import {useState} from 'react';
+import {VolunteerEmail} from "./VolunteerEmail"
 const Volunteer = () => {
-    const [volContent, setVolContent] = useState(NULL)
 
-    const changeBodyContent = (pageKey) => {
-        
-    }
 
     return (
 
@@ -87,34 +82,7 @@ const Volunteer = () => {
                     </p>
                 </div>
             </div>
-            
-            
-            {/* consider making this form a separate component */}
-
-            <form action="/action_page.php" className='volunteer-form-container'>
-                <input type={'text'} placeholder='First name'
-                    value={this.state.fname}
-                    onChange={e => this.setSate({ fname: e.target.value})}/>
-                <input type=" text" id="lname" name="lastname" placeholder="Last name"
-                    value={this.state.lname}
-                    onChange={e => this.setState({ lname: e.target.value })}/>
-                <input type="email" id="email" name="email" placeholder="Email"
-                    value={this.state.email}
-                    onChange={e => this.setState({ email: e.target.value })}/>
-                <input type="tel" id="phone" name="phone" placeholder="Phone"
-                    value={this.state.phone}
-                    onChange={e => this.setState({ phone: e.target.value })}/>
-                <input type="text" id="msg" name="msg" placeholder="Volunteer oportunities you are interested in"
-                    value={this.state.message}
-                    onChange={e => this.setState({ message: e.target.value })}/>
-                <input type={'submit'} value='Submit' onClick={e => this.handleFormSubmit(e)}/>
-
-                <div>
-                    {this.state.mailSent &&
-                        <div>Thank you for contcting us.</div>
-                    }
-                </div>
-            </form>
+            <VolunteerEmail/>
         </div>
     )
 }

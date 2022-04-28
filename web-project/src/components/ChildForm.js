@@ -1,4 +1,3 @@
-
 const ChildForm = ( { childTitle } ) => {
 
     return (
@@ -11,7 +10,7 @@ const ChildForm = ( { childTitle } ) => {
                     <option value="F">F</option>
                     <option value="M">M</option>
                 </select>
-            <input type={"number"} placeholder='Shoe Size:' min='0' max='16'></input>
+            <input type={"number"} placeholder='Shoe Size:' min='0' max='16' required></input>
             <input type={"text"} placeholder='Notes about your child:' maxlength='250'></input>
         </div>
     )

@@ -87,17 +87,17 @@ const Help = () => {
             </h3>
 
             <form className="request-help-form">
-                <input type={'text'} placeholder='Parent Last Name' maxlength='250'></input>
-                <input type={'text'} placeholder='Parent First Name' maxlength='250'></input>
-                <input type={'text'} placeholder='Street Number - example: 2311' maxlength='10'></input>
-                <input type={'text'} placeholder='Street Name - example: Hamlet Way' maxlength='250'></input>
+                <input type={'text'} placeholder='Parent Last Name' maxlength='250' required></input>
+                <input type={'text'} placeholder='Parent First Name' maxlength='250' required></input>
+                <input type={'text'} placeholder='Street Number - example: 2311' maxlength='10' required></input>
+                <input type={'text'} placeholder='Street Name - example: Hamlet Way' maxlength='250' required></input>
                 <input type={'text'} placeholder='Apt/Suite/Unit/Building/Floor - example: Apt. 4' maxlength='20'></input>
-                <input type={'text'} placeholder='City - example: Manhattan' maxlength='25'></input>
-                <input type={'text'} placeholder='Postal Code - example: 80456' maxlength='15'></input>
-                <input type={'tel'} placeholder="Phone Number"></input>
+                <input type={'text'} placeholder='City - example: Manhattan' maxlength='25' required></input>
+                <input type={'text'} placeholder='Postal Code - example: 80456' maxlength='15' required></input>
+                <input type={'tel'} placeholder="Phone Number" required></input>
                 <label for="date">Input Date arrived in US:</label>
-                <input type={'date'} placeholder='Date arrived in US'></input>
-                <input type={'text'} placeholder='Country of Origin - example: Afghanistan' maxlength='250'></input>
+                <input type={'date'} placeholder='Date arrived in US' required></input>
+                <input type={'text'} placeholder='Country of Origin - example: Afghanistan' maxlength='250' required></input>
                 <label for="Status">Select an Immigration Status:</label>
                     <select id="status" name="status">
                         <option value="SIV">SIV</option>
