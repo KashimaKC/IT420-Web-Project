@@ -31,7 +31,6 @@ const Nav = () => {
                 setContent(<Home /> )
                 break;
             case 'volunteer' :
-                <button value={this.state.data} onClick={this.handleFormSubmit}/>
                 setContent(<Volunteer/>)
                 break;
             case 'donate' : 

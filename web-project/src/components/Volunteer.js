@@ -1,7 +1,11 @@
 
-
+import {useState} from 'react';
 const Volunteer = () => {
+    const [volContent, setVolContent] = useState(NULL)
 
+    const changeBodyContent = (pageKey) => {
+        
+    }
 
     return (
 
