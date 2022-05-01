@@ -1,5 +1,4 @@
-
-
+import {VolunteerEmail} from "./VolunteerEmail"
 const Volunteer = () => {
 
 
@@ -83,19 +82,7 @@ const Volunteer = () => {
                     </p>
                 </div>
             </div>
-            
-            
-            {/* consider making this form a separate component */}
-
-            <div className='volunteer-form-container'>
-                <input type={'text'} placeholder='First name'></input>
-                <input type={'text'} placeholder='Last name'></input>
-                <input type={'email'} placeholder='Email'></input>
-                <input type={'tel'} placeholder='Phone'></input>
-                <input type={'text'} placeholder='Volunteer oportunities you are interested in'></input>
-
-                <input type={'submit'} value='Submit'></input>
-            </div>
+            <VolunteerEmail/>
         </div>
     )
 }

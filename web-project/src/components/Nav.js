@@ -31,7 +31,7 @@ const Nav = () => {
                 setContent(<Home /> )
                 break;
             case 'volunteer' :
-                setContent(<Volunteer />)
+                setContent(<Volunteer/>)
                 break;
             case 'donate' : 
                 setContent(<Donate />)
