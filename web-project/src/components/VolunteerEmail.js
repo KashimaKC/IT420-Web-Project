@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export const VolunteerEmail = () => {
   const form = useRef();
@@ -7,18 +7,19 @@ export const VolunteerEmail = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_8nnxe18', form.current, 'x6NRTBTdFL76jybCi')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset()
+    //Parameters: Service ID, Template ID, form, Public Key (These can all be found on emailjs.com)
+    emailjs.sendForm('service_gnz4xwm', 'template_8nnxe18', form.current, 'x6NRTBTdFL76jybCi')
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+        e.target.reset()
   };
 
   return (
     <div>
-        <form className='volunteer-form-container' onSubmit={sendEmail}>
+        <form className='volunteer-form-container' onSubmit={sendEmail} ref={form}>
             <input type={'text'} placeholder='First name' name="fname" required></input>
             <input type={'text'} placeholder='Last name' name="lname" required></input>
             <input type={'email'} placeholder='Email' name="sender_email" required></input>
