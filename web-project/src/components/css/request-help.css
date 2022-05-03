@@ -19,6 +19,15 @@
     width: 80%;
 }
 
+.request-help-form > button {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 80%;
+    text-align: center;
+}
+
 .request-help-form > select {
     margin-top: 10px;
     margin-left: auto;

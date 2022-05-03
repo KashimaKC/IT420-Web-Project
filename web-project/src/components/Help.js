@@ -1,8 +1,8 @@
 import Sponsors from "./Sponsors"
 import ChildForm from "./ChildForm";
 //import { useState, useEffect } from "react";
-import { useState } from "react";
-import Axios from 'axios';
+import React, { useState } from "react";
+import Axios from 'axios'; //allows us to create api requests
 
 
 // this component renders the request help page
@@ -86,11 +86,11 @@ const Help = (e) => {
     const [city, setCity] = useState('');
     const [zipcode, setZipcode] = useState('');
     const [phone, setPhone] = useState('');
-    const [dateOfArrival, setDateOfArrival] = useState('');
-    const [dateReceived, setDateReceived] = useState('');
+    const [dateOfArrival, setDateOfArrival] = useState(null);
+    const [dateReceived, setDateReceived] = useState(null);
     const [countryOfOrigin, setCountryOfOrigin] = useState('');
-    const [immigrationStatus, setImmigrationStatus] = useState('');
-    const [speaksEnglish, setSpeaksEnglish] = useState('');
+    const [immigrationStatus, setImmigrationStatus] = useState(null);
+    const [speaksEnglish, setSpeaksEnglish] = useState(null);
     const [notes, setNotes] = useState('');
 
     //const [childField, setChildrenState] = useState(null);
@@ -102,7 +102,7 @@ const Help = (e) => {
                                                         zipcode: zipcode, phone: phone, dateOfArrival: dateOfArrival, 
                                                         dateReceived: dateReceived, countryOfOrigin: countryOfOrigin, 
                                                         immigrationStatus: immigrationStatus, speaksEnglish: speaksEnglish, notes: notes,
-                                                        childField: childField,
+                                                        childField: childField
                                                         }).then(() => {
                                                             alert('successful insert');
                                                         });
@@ -137,7 +137,7 @@ const Help = (e) => {
                 <input type={'text'} placeholder='Postal Code - example: 80456' maxlength='15' required onChange={() => {
                     setZipcode(e.target.value)
                 }}></input>
-                <input type={'tel'} placeholder="Phone Number" required onChange={() => {
+                <input type={'text'} placeholder="Phone Number" required onChange={() => {
                     setPhone(e.target.value)
                 }}></input>
                 <label for="date">Input Date arrived in US:</label>
@@ -184,7 +184,7 @@ const Help = (e) => {
                     {childField}
                 </div>
 
-                <input type={'submit'} value='Submit' onClick={submitHelpForm}></input>
+                <button className="request-help-form" onClick={submitHelpForm}>Submit</button>
             </form>
 
             {/* render sponsors component at bottom of page. */}

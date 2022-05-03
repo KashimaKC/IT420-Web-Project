@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 const ChildForm = ( { childTitle }, e ) => {
 
-    const [childFirstName, setFName] = useState('')
-    const [gender, setGender] = useState('')
-    const [age, setAge] = useState('')
-    const [shoe, setShoeSize] = useState('')
-    const [childNotes, setChildNotes] = useState('')
+    const [childFirstName, setFName] = useState('');
+    const [gender, setGender] = useState('');
+    const [age, setAge] = useState(null);
+    const [shoe, setShoeSize] = useState(null);
+    const [childNotes, setChildNotes] = useState('');
 
     return (
         <div className="input-field">
