@@ -56,6 +56,7 @@ const Help = () => {
                 <input type={'text'} placeholder='Country of Origin - example: Afghanistan' maxlength='250' required onChange={(e) => {setCountryOfOrigin(e.target.value)}}/>
                 <label for="Immigration Status">Select an Immigration Status:</label>
                     <select id="immigration status" name="immigrationStatus" onChange={(e) => {setImmigrationStatus(e.target.value)}}>
+                        <option value="Other">Other</option>
                         <option value="SIV">SIV</option>
                         <option value="Evacuee">Evacuee</option>
                         <option value="Parolee">Parolee</option>
@@ -64,8 +65,8 @@ const Help = () => {
                     </select>
                 <label for="language">Do you speak English?</label>
                     <select id="language" name="language" onChange={(e) => {setSpeaksEnglish(e.target.value)}}>
-                        <option value="Yes">Yes</option>
                         <option value="No">No</option>
+                        <option value="Yes">Yes</option>
                    </select>
                 <input type={"text"} placeholder='Notes About Parent' maxlength='250' onChange={(e) => {setNotes(e.target.value)}}/>
                 <input type="submit" value="Submit" onClick={submitHelpForm}></input>
