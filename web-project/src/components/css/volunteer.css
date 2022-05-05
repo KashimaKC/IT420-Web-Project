@@ -8,6 +8,11 @@
     background: linear-gradient(360deg, #ffffff 10%, #eceaf5 360% );
 }
 
+.volunteer-container > h2 {
+    padding: 25px 0px 0px 0px;
+    text-align: center;
+}
+
 .volunteer-flex-container { 
     display: flex; 
     flex-direction: row;
@@ -44,7 +49,6 @@
     margin-right: auto;
     margin-bottom: 50px;
     align-items: center;
-    border: 2px solid black;
 }
 
 .volunteer-form-container > input {

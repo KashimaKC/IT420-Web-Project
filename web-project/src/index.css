@@ -34,6 +34,13 @@ code {
   margin-left: auto;
   width: 10%;
   margin-right: 25px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+}
+
+.footer-container > button:hover {
+  background-color: rgb(3, 107, 107);
 }
 
 .footer-container > a {

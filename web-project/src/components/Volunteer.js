@@ -1,10 +1,17 @@
 import {VolunteerEmail} from "./VolunteerEmail"
+
 const Volunteer = () => {
 
 
     return (
 
         <div className="volunteer-container">
+
+            <h2>
+                Here are some volunteering opportunities with our programs and projects. <br />
+                Let us know how you would like to get involved by filling out the form below.
+            </h2>
+
             <div className="volunteer-flex-container">
                 <div className='volunteer-content'>
                     <div className="flex-content">

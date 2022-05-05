@@ -7,18 +7,29 @@
     align-items: center;
     height: 100px;
     font-size: large;
-    background-color: grey;
+    background-color: rgb(122, 118, 118);
     color: black;
 }
 
-.navbar-container > p {
+.navbar-container > img {
     padding-left: 10px;
+    width: 150px;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .navbar-container > button {
     margin-right: 10px;
     width: 100px;
     height: 50%;
+    color: rgb(232, 229, 238);
+    background-color: rgb(87, 85, 85);
+    border-radius: 3px;
+    border: 1px solid rgb(39, 39, 39);
+}
+
+.navbar-container > button:hover {
+    background-color: #636060;
 }
 
 .navbar-container > button#home-btn {
