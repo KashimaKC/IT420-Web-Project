@@ -53,9 +53,9 @@ const Nav = () => {
         <div>
             <div className='navbar-container'>
 
-            <p>
-                Starting Point World
-            </p>
+            <img src="https://i.imgur.com/8hdP1qo.png" alt="Starting Point">
+                
+            </img>
 
             <button id="home-btn" onClick={() => changeBodyContent('home')}>Home</button>
             <button id="volunteer-btn" onClick={() => changeBodyContent('volunteer')}>Volunteer</button>

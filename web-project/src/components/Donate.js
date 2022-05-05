@@ -1,3 +1,4 @@
+import {DonateEmail} from "./DonateEmail"
 // this component renders the donation page.
 
 const Donate = () => {
@@ -16,7 +17,7 @@ const Donate = () => {
                         Donations to Starting Point are tax deductible. Our nonprofit EIN number is 82-2055439. <br />
                         <b>Click here to be linked to Paypal:</b>
                     </p>
-                    <button id="donate-link-bttn" onClick={event => window.location.href='https://startingpointworld.kindful.com/'}>Donate</button>
+                    <button id="donate-link-bttn" onClick={event => window.location.href='https://startingpointworld.kindful.com/'}>Donate Here</button>
                 </div>
 
                 <div className="item-donation">
@@ -32,18 +33,11 @@ const Donate = () => {
                 </div>
             </div>
             <section id="donation-form-container">
-                <p>
+                <h3>
                     Please complete the following form if you are interested in donating, we will contact you as soon as possible!
-                </p>
-                <form className="donation-form">
-                    <input type={'text'} id='name' placeholder="Full name" required></input>
-                    <input type={'email'} id='email' placeholder="sample@email.com" required></input>
-                    <input type={'phone'} id='phone' placeholder="(888)888-8888" required></input>
-                    <input type={'text'} id='address' placeholder="7777 Donation Ln."></input>
-                    <input type={'text'} id='items' placeholder="Items you would like to donate (please include gender and size)" required></input>
-                    <input type={'submit'} value='Submit'></input>
-                </form>
-                <h2>Thank you for supporting Starting Point and the newcomer community!</h2>
+                </h3>
+                    <DonateEmail/>
+                <h2 id="thanks-footer">Thank you for supporting Starting Point and the newcomer community!</h2>
             </section>
         </div>
     )
