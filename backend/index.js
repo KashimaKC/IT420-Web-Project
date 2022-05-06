@@ -42,6 +42,8 @@ app.post('/', function (req, res) {
         const speaksEnglish = req.body.speaksEnglish;
         const notes = req.body.notes;
 
+        const childField = req.body.childField; //and array of information about the children
+
         const sqlInsertParent = "INSERT INTO Parent (parent_id, lastName, firstName, address, street, apartment, city, zipcode, " 
                             + "phone, dateOfArrival, dateReceived, countryOfOrigin, immigrationStatus, speaksEnglish, notes) VALUES "
                             + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -69,11 +71,14 @@ app.post('/', function (req, res) {
             objVal = Object.values(obj);
             var maxParentID = Number(objVal);
 
-            //Inser the children into the database
-            db.query(sqlInsertChild, ["", maxParentID, "Parker", "F", 10, 
-                                        8, "He likes baseball"], (err, result) => {
-                                            console.log(err);
-            });
+            //Insert the children into the database
+            //https://stackoverflow.com/questions/51193704/react-input-setstate-for-array-of-objects
+            // for(let i = 0; i < childField.length; i++) {
+            //     db.query(sqlInsertChild, ["", maxParentID,childField[i].childFirstName, childField[i].gender, childField[i].age, 
+            //                                 childField[i].shoe, childField[i].childNotes], (err, result) => {
+            //                                 console.log(err);
+            //     });
+            // }
         });
     });
 });

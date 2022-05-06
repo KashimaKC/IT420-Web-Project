@@ -1,10 +1,80 @@
-import Sponsors from "./Sponsors"
+import Sponsors from "./Sponsors";
+import ChildForm from "./ChildForm";
 import React, { useState } from "react";
 import axios from 'axios'; //allows us to create api requests
 
 // this component renders the request help page
 
 const Help = () => {
+
+    const [sample, sampleSet] = useState(null);
+
+    console.log(sample);
+
+    const addChild = (e) => {
+        var children = []
+
+        switch (e.target.value) {
+            case '0' : setChildrenState(null);
+            case '1' :
+                setChildrenState(
+                    <ChildForm childTitle={'Child 1'} sampleSet={sampleSet}/>
+                )
+                break;
+            case '2' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                    </>
+                )
+                break;
+            case '3' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                    </>
+                )
+                break;
+            case '4' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                    </>
+                )
+                break;
+            case '5' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                        <ChildForm childTitle={'Child 5'}/>
+                    </>
+                )
+                break;
+            case '6' :
+                setChildrenState(
+                    <>
+                        <ChildForm childTitle={'Child 1'}/>
+                        <ChildForm childTitle={'Child 2'}/>
+                        <ChildForm childTitle={'Child 3'}/>
+                        <ChildForm childTitle={'Child 4'}/>
+                        <ChildForm childTitle={'Child 5'}/>
+                        <ChildForm childTitle={'Child 6'}/>
+                    </>
+                )
+                break;
+            default: 
+                //no default because the user can only select 1-> 6
+        }
+    }
 
     const [lastName, setLastName] = useState('');
     const [firstName, setFirstName] = useState('');
@@ -20,14 +90,17 @@ const Help = () => {
     const [immigrationStatus, setImmigrationStatus] = useState(null);
     const [speaksEnglish, setSpeaksEnglish] = useState(null);
     const [notes, setNotes] = useState('');
+
+    //const [childField, setChildrenState] = useState(null);
     
     const submitHelpForm = () => {
+        console.log(childField);
         axios.post('http://localhost:3001/', {lastName: lastName, firstName: firstName, address: address, 
                                                 street: street, apartment: apartment, city: city, 
                                                 zipcode: zipcode, phone: phone, dateOfArrival: dateOfArrival, 
                                                 dateReceived: dateReceived, countryOfOrigin: countryOfOrigin, 
-                                                immigrationStatus: immigrationStatus, speaksEnglish: speaksEnglish, notes: notes
-                                                /*, childField: childField*/
+                                                immigrationStatus: immigrationStatus, speaksEnglish: speaksEnglish, notes: notes,
+                                                /*childField: childField*/
                                                 }).then(() => {
                                                     alert('successful insert');
                                                 });
@@ -69,8 +142,24 @@ const Help = () => {
                         <option value="Yes">Yes</option>
                    </select>
                 <input type={"text"} placeholder='Notes About Parent' maxlength='250' onChange={(e) => {setNotes(e.target.value)}}/>
+
+                <label for="children">How many children do you have?</label>
+                    <select id="children" name="children" onChange={addChild}>
+                        <option value={0}>No Response</option>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
+                        <option value={6}>6</option>
+                    </select>
+                <div className="child-add-form">
+                    {childField}
+                </div>
+
                 <input type="submit" value="Submit" onClick={submitHelpForm}></input>
             </form>
+            {/*{ console.log(child) }*/}
             
             {/* render sponsors component at bottom of page. */}
             <Sponsors />
