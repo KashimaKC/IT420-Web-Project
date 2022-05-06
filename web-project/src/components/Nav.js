@@ -15,7 +15,9 @@ import Volunteer from "./Volunteer"
 import Donate from "./Donate"
 import Help from "./Help"
 import About from "./About"
+import Translate from "./Translate"
 import { useState } from 'react'
+
 
 const Nav = () => {
 
@@ -62,6 +64,7 @@ const Nav = () => {
             <button id="donate-btn" onClick={() => changeBodyContent('donate')}>Donate</button>
             <button id="help-btn" onClick={() => changeBodyContent('help')}>Request Help</button>
             <button id="about-btn" onClick={() => changeBodyContent('about')}>About Us</button>
+            <Translate />
 
             </div>
             <div className="body-content">

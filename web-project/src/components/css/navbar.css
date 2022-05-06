@@ -43,3 +43,14 @@
     background: linear-gradient(360deg, #ffffff 10%, #eceaf5 360% );
     /*background: linear-gradient(360deg, #f1f5f5 10%, #eee9e9 360% );*/
 }
+
+/* styles for navbar translate */
+
+#google_translate_element {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    filter: contrast(3);
+}
