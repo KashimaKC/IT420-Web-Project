@@ -1,3 +1,4 @@
+import {DonateEmail} from "./DonateEmail"
 // this component renders the donation page.
 
 const Donate = () => {
@@ -35,14 +36,7 @@ const Donate = () => {
                 <h3>
                     Please complete the following form if you are interested in donating, we will contact you as soon as possible!
                 </h3>
-                <form className="donation-form">
-                    <input type={'text'} id='name' placeholder="Full name" required></input>
-                    <input type={'email'} id='email' placeholder="sample@email.com" required></input>
-                    <input type={'phone'} id='phone' placeholder="(888)888-8888" required></input>
-                    <input type={'text'} id='address' placeholder="7777 Donation Ln."></input>
-                    <input type={'text'} id='items' placeholder="Items you would like to donate (please include gender and size)" required></input>
-                    <input type={'submit'} value='Submit'></input>
-                </form>
+                    <DonateEmail/>
                 <h2 id="thanks-footer">Thank you for supporting Starting Point and the newcomer community!</h2>
             </section>
         </div>

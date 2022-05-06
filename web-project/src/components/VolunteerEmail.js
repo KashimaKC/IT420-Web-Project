@@ -14,7 +14,8 @@ export const VolunteerEmail = () => {
         }, function(error) {
             console.log('FAILED...', error);
         });
-        e.target.reset()
+        e.target.reset();
+        alert("Form Submitted!");
   };
 
   return (
