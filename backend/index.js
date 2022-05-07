@@ -51,9 +51,30 @@ app.post('/', function (req, res) {
         
 
         var json = JSON.parse(children);
-        var obj = json[0];
-        objVal = Object.values(obj);
-        console.log(objVal);
+
+        var obj1 = json[0];
+        var objVal1 = Object.values(obj1);
+        console.log("Child 1:", objVal1);
+
+        var obj2 = json[1];
+        var objVal2 = Object.values(obj2);
+        console.log("Child 2:", objVal2);
+
+        var obj3 = json[2];
+        var objVal3 = Object.values(obj3);
+        console.log("Child 3:", objVal3);
+
+        var obj4 = json[3];
+        var objVal4 = Object.values(obj4);
+        console.log("Child 4:", objVal4);
+
+        var obj5 = json[4];
+        var objVal5 = Object.values(obj5);
+        console.log("Child 1:", objVal5);
+
+        var obj6 = json[5];
+        var objVal6 = Object.values(obj6);
+        console.log("Child 1:", objVal6);
 
         //insert the parent into the database
         // db.query(sqlInsertParent, ["", lastName, firstName, address, street, apartment, 
